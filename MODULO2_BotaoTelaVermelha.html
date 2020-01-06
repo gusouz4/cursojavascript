@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <style>
+            .box{
+                width: 100px;
+                height: 100px;
+                position: relative;
+                float: left;
+            }
+        </style>
+    </head>
+
+    <body>
+        <button onclick="botaoTela()">Tela vermelha</button>
+        <div id="app">
+
+        </div>
+
+        <script>
+            
+            function botaoTela(){
+                var box = document.createElement('div');
+                box.setAttribute('class', 'box');
+                box.setAttribute('style', 'background-color:#f00;');
+
+                var criarCaixa = document.querySelector('#app');
+                criarCaixa.appendChild(box);
+
+            }
+        </script>
+    </body>
+</html>
