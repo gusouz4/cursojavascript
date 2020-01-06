@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+    </head>
+
+    <body>
+        <script>
+            function retornaHabilidades(usuarios) {
+                for(var i = 0; i < usuarios.length; i++){
+                    var resultado = console.log("O " + usuarios[i].nome + " possui as habilidades: " + usuarios[i].habilidades);
+                }
+            }
+
+            var usuarios = [
+                {
+                nome: "Diego",
+                habilidades: ["Javascript", "ReactJS", "Redux"]
+                },
+                {
+                nome: "Gabriel",
+                habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+                }
+            ];
+
+            var resultado = retornaHabilidades(usuarios);
+            console.log(resultado);
+        </script>
+    </body>
+</html>
