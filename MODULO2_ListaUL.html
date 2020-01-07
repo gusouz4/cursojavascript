@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+    </head>
+
+    <body>
+
+        <div id="app">
+            <ul id="lista">
+
+            </ul>
+        </div>
+
+        <script>
+            function criaUL(nomes){
+                const lista = document.getElementById('lista');
+
+                for(i = 0; i < nomes.length; i++){
+                    const item = document.createElement('li');
+                    item.innerHTML = nomes[i];
+
+                    lista.appendChild(item);
+                }
+
+            }
+
+           var nomes = ["Diego", "Gabriel", "Lucas"];
+
+           var resultado = criaUL(nomes);
+           console.log(resultado);
+        </script>
+    </body>
+</html>
