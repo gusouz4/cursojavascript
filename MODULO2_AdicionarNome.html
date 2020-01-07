@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+    </head>
+
+    <body>
+
+        <div id="app">
+            <input type="text" id="campo" />
+            <button id="botao" onclick="adicionaNome('campo')">Adicionar nome</button>
+            
+            <ul id="lista">
+
+            </ul>
+        </div>
+
+        <script>
+            function criaUL(nomes){
+                const lista = document.getElementById('lista');
+
+                for(i = 0; i < nomes.length; i++){
+                    const item = document.createElement('li');
+                    item.innerHTML = nomes[i];
+
+                    lista.appendChild(item);
+                }
+
+            }
+
+            function adicionaNome(campo){
+                const lista = document.getElementById('lista');
+                const item = document.createElement('li');
+                item.innerHTML = document.getElementById(campo).value;
+                lista.appendChild(item);
+
+                const reset = document.getElementById('campo').value='';
+            }
+
+           var nomes = ["Diego", "Gabriel", "Lucas"];
+
+           var resultado = criaUL(nomes);
+        </script>
+    </body>
+</html>
