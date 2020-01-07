@@ -10,7 +10,7 @@ var buscaGit = function () {
                 console.log(response);
                 for(repo of response.data){
                     var repoElement = document.createElement('li');
-                    var repoText = document.createTextNode(JSON.stringify(repo.name));
+                    var repoText = document.createTextNode(repo.name);
 
                     repoElement.appendChild(repoText);
 
